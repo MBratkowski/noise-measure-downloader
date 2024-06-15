@@ -39,6 +39,7 @@ def extract_table_from_text(text):
 
 
 def process_pdf(filepath, index, total):
+    log_info(f"Processing file {index + 1}/{total}: {filepath}")
     with open(filepath, "rb") as f:
         pdf_reader = PyPDF2.PdfReader(f)
         num_pages = len(pdf_reader.pages)
